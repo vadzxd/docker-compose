@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/trilium/data
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Trilium/data
         target: /home/node/trilium-data
     network_mode: bridge
     privileged: false

@@ -27,13 +27,13 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/transmission/downloads
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Transmission/downloads
         target: /downloads
       - type: bind
-        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/transmission/watch
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Transmission/watch
         target: /watch
       - type: bind
-        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/transmission/config
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Transmission/config
         target: /config
     x-zettos:
       envs:

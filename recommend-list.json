@@ -1,0 +1,17 @@
+[
+  {
+    "appid": "immich"
+  },
+  {
+    "appid": "jellyfin"
+  },
+  {
+    "appid": "memos"
+  },
+  {
+    "appid": "qbittorrent"
+  },
+  {
+    "appid": "nextcloud"
+  }
+]

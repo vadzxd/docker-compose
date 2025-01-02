@@ -1,0 +1,49 @@
+name: trilium
+services:
+  trilium:
+    command: []
+    container_name: trilium
+    deploy:
+      resources:
+        reservations:
+          memory: "256M"
+    image: zadam/trilium:0.62.2
+    labels:
+      icon: Trilium/icon.png
+    ports:
+      - target: 8080
+        published: "8088"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/trilium/data
+        target: /home/node/trilium-data
+    network_mode: bridge
+    privileged: false
+x-zettos:
+  tagline:
+    en_us: Trilium Notes is a hierarchical note-taking application with a focus on building large personal knowledge bases.
+    zh_cn: Trilium Notes是一款具有层次结构的笔记应用程序，专注于构建庞大的个人知识库。
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  author: Jason McFeetors
+  category: Utilities
+  description:
+    en_us: Trilium Notes is a hierarchical note-taking application with a focus on building large personal knowledge bases.
+    zh_cn: Trilium Notes是一款具有层次结构的笔记应用程序，专注于构建庞大的个人知识库。
+  developer: zadam
+  icon: Trilium/icon.png
+  screenshot_link:
+    - Trilium/screenshot-1.png
+    - Trilium/screenshot-2.png
+    - Trilium/screenshot-3.png
+  index: /
+  port_map: "8088"
+  scheme: http
+  store_app_id: trilium
+  title:
+    en_us: Trilium
+    zh_cn: Trilium

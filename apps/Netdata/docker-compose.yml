@@ -24,22 +24,22 @@ services:
       - apparmor:unconfined
     volumes:
       - type: bind
-        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/netdata
         target: /etc/netdata
       - type: bind
-        source: /etc/passwd
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/passwd
         target: /host/etc/passwd
       - type: bind
-        source: /etc/group
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/group
         target: /host/etc/group
       - type: bind
-        source: /proc
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/proc
         target: /host/proc
       - type: bind
-        source: /sys
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/sys
         target: /host/sys
       - type: bind
-        source: /etc/os-release
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/os-release
         target: /host/etc/os-release
       - type: bind
         source: /var/run/docker.sock

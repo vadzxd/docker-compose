@@ -62,7 +62,7 @@ x-zettos:
     zh_cn: 实时性能监控
   hostname: ""
   screenshot_link:
-    - Netdata/screenshot-1.jpg
+    - Netdata/screenshot-1.png
     - Netdata/screenshot-2.png
     - Netdata/screenshot-3.png
   icon: Netdata/icon.png

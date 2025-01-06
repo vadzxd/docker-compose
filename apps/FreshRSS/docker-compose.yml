@@ -62,6 +62,8 @@ x-zettos:
   icon: FreshRSS/icon.png
   screenshot_link:
     - FreshRSS/screenshot-1.png
+    - FreshRSS/screenshot-2.png
+    - FreshRSS/screenshot-3.png
   tagline:
     en_us: A free, self-hostable news aggregator…
     zh_cn: 一个免费的、可自行托管的新闻聚合器...

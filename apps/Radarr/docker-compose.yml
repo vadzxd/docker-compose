@@ -83,11 +83,9 @@ x-zettos:
   developer: Radarr
   icon: Radarr/icon.png
   screenshot_link:
-    - Radarr/screenshot-1.jpg
-    - Radarr/screenshot-2.jpg
-    - Radarr/screenshot-3.jpg
-    - Radarr/screenshot-4.jpg
-    - Radarr/screenshot-5.jpg
+    - Radarr/screenshot-1.png
+    - Radarr/screenshot-2.png
+    - Radarr/screenshot-3.png
   tagline:
     en_us: The movie collection manager for Usenet and BitTorrent users
     zh_cn: 为Usenet和BitTorrent用户提供的电影集合管理器

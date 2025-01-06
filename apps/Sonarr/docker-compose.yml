@@ -84,10 +84,9 @@ x-zettos:
   developer: Sonarr
   icon: Sonarr/icon.png
   screenshot_link:
-    - Sonarr/screenshot-1.jpg
-    - Sonarr/screenshot-2.jpg
-    - Sonarr/screenshot-3.jpg
-    - Sonarr/screenshot-4.jpg
+    - Sonarr/screenshot-1.png
+    - Sonarr/screenshot-2.png
+    - Sonarr/screenshot-3.png
   tagline:
     en_us: The PVR for Usenet and BitTorrent users
     zh_cn: 用于Usenet和BitTorrent用户的PVR

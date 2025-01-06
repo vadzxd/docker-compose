@@ -42,6 +42,7 @@ x-zettos:
   icon: Snapdrop/icon.png
   screenshot_link:
     - Snapdrop/screenshot-1.png
+    - Snapdrop/screenshot-2.png
   tagline:
     en_us: Cross-platform file sharing made easy.
     zh_cn: 轻松实现跨平台文件共享。

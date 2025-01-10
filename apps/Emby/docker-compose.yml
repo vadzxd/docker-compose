@@ -85,11 +85,11 @@ x-zettos:
     sv_se: Att samla alla dina hemvideor, musik och foton på ett ställe har aldrig varit enklare. Din personliga Emby-server konverterar och strömmar dina mediefiler i realtid för att spela upp dem på vilket som helst enhet.
     uk_ua: Збирання всіх ваших домашніх відео, музики та фотографій в одному місці ніколи не було таким простим. Ваш особистий сервер Emby автоматично конвертує та потоково передає ваші медіа-файли для відтворення на будь-якому пристрої.
   developer: linuxserver
-  icon: Emby/icon.png
+  icon: Emby/icon.webp
   screenshot_link:
-    - Emby/screenshot-1.png
-    - Emby/screenshot-2.png
-    - Emby/screenshot-3.png
+    - Emby/screenshot-1.webp
+    - Emby/screenshot-2.webp
+    - Emby/screenshot-3.webp
   tagline:
     en_us: Take your media anywhere with Emby
     zh_cn: 用EMBY随时随地带着媒体
@@ -104,7 +104,7 @@ x-zettos:
     pt_br: LEVE SEUS MÍDIAS PARA QUALQUER LUGAR COM EMBY
     sv_se: TA DINA MEDIA VAR SOM HELST MED EMBY
     uk_ua: ВЗЯТИ СЕБЕ МЕДІА ВСЮДИ З EMBY
-  thumbnail: Emby/thumbnail.png
+  thumbnail: Emby/thumbnail.webp
   tips: {}
   title:
     en_us: Emby

@@ -82,11 +82,11 @@ x-zettos:
     sv_se: Sonarr är en PVR för användare av Usenet och BitTorrent. Den kan övervaka flera RSS-flöden för nya avsnitt av dina favoritprogram och fånga dem, sortera dem och döpa om dem. Den kan också konfigureras för att automatiskt uppgradera kvaliteten på de redan nedladdade filerna när en bättre kvalitet blir tillgänglig.
     uk_ua: Sonarr - це PVR для користувачів Usenet і BitTorrent. Він може відстежувати кілька RSS-каналів для нових серій ваших улюблених шоу і захоплювати, сортувати і перейменовувати їх. Він також може бути налаштований для автоматичного оновлення якості вже завантажених файлів, коли краща якість стає доступною.
   developer: Sonarr
-  icon: Sonarr/icon.png
+  icon: Sonarr/icon.webp
   screenshot_link:
-    - Sonarr/screenshot-1.png
-    - Sonarr/screenshot-2.png
-    - Sonarr/screenshot-3.png
+    - Sonarr/screenshot-1.webp
+    - Sonarr/screenshot-2.webp
+    - Sonarr/screenshot-3.webp
   tagline:
     en_us: The PVR for Usenet and BitTorrent users
     zh_cn: 用于Usenet和BitTorrent用户的PVR
@@ -101,7 +101,7 @@ x-zettos:
     pt_br: O PVR para usuários de Usenet e BitTorrent
     sv_se: PVR för användare av Usenet och BitTorrent
     uk_ua: PVR для користувачів Usenet і BitTorrent
-  thumbnail: Radarr/thumbnail.jpg
+  thumbnail: Radarr/thumbnail.webp
   tips: {}
   title:
     en_us: Sonarr

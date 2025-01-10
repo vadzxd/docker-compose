@@ -1,0 +1,74 @@
+---
+name: netdata
+services:
+  app:
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    cpu_shares: 90
+    container_name: netdata
+    deploy:
+      resources:
+        limits:
+          memory: 1794M
+    image: netdata/netdata:stable
+    labels:
+      icon: Netdata/netdata.webp
+    pid: host
+    ports:
+      - target: 19999
+        published: "19999"
+        protocol: tcp
+    restart: unless-stopped
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/netdata
+        target: /etc/netdata
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/passwd
+        target: /host/etc/passwd
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/group
+        target: /host/etc/group
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/proc
+        target: /host/proc
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/sys
+        target: /host/sys
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Netdata/os-release
+        target: /host/etc/os-release
+#      - type: bind
+#        source: /var/run/docker.sock
+#        target: /var/run/docker.sock
+    network_mode: bridge
+    privileged: false
+x-zettos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  author: f4bio
+  main: netdata
+  category: Utilities
+  description:
+    en_us: Netdata is a real-time performance and health monitoring solution that helps you visualize and understand the behavior of your systems.
+    zh_cn: Netdata是一个实时性能和健康监控解决方案，帮助您可视化并理解系统的行为。
+  tagline:
+    en_us: Real-time Performance Monitoring
+    zh_cn: 实时性能监控
+  hostname: ""
+  screenshot_link:
+    - Netdata/screenshot-1.webp
+    - Netdata/screenshot-2.webp
+    - Netdata/screenshot-3.webp
+  icon: Netdata/icon.webp
+  index: /
+  port_map: "19999"
+  scheme: http
+  store_app_id: netdata
+  title:
+    en_us: Netdata

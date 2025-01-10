@@ -78,12 +78,12 @@ x-zettos:
   developer: immich
   icon: Immich/icon.svg
   screenshot_link:
-    - Immich/screenshot-1.png
-    - Immich/screenshot-2.png
-    - Immich/screenshot-3.png
+    - Immich/screenshot-1.webp
+    - Immich/screenshot-2.webp
+    - Immich/screenshot-3.webp
   tagline:
     en_us: Self-hosted photo and video management solution
-  thumbnail: Immich/thumbnail.png
+  thumbnail: Immich/thumbnail.webp
   tips: {}
   title:
     en_us: Immich

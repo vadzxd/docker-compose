@@ -118,11 +118,11 @@ x-zettos:
     uk_ua: |
       Transmission - це вільний проект, який базується на волонтерстві. На відміну від деяких клієнтів BitTorrent, Transmission не грає із своїми користувачами для збору грошей: Transmission не містить панелі інструментів, спливаючих вікон, реклами Flash, інструментів Twitter або іншого. Він не зберігає деякі функції назад для версії платної. Його вихідний код доступний для перегляду будь-кому. Ми не відстежуємо наших користувачів, і наш веб-сайт і форуми не мають реклами або аналітики третіх сторін.
   developer: Transmission
-  icon: Transmission/icon.png
+  icon: Transmission/icon.webp
   screenshot_link:
-    - Transmission/screenshot-1.png
-    - Transmission/screenshot-2.png
-    - Transmission/screenshot-3.png
+    - Transmission/screenshot-1.webp
+    - Transmission/screenshot-2.webp
+    - Transmission/screenshot-3.webp
   tagline:
     en_us: Transmission is a cross-platform BitTorrent client
     zh_cn: 跨平台的 BitTorrent 客户端
@@ -137,8 +137,11 @@ x-zettos:
     pt_br: Transmission é um cliente BitTorrent multiplataforma
     sv_se: Transmission är en multiplattformars BitTorrent-klient
     uk_ua: Transmission - це багатоплатформний клієнт BitTorrent
-  thumbnail: Transmission/thumbnail.png
+  thumbnail: Transmission/thumbnail.webp
   tips:
+    default_account:
+      username: ZettOS
+      password: ZettOS
     before_install:
       en_us: |
         | username | password |

@@ -117,15 +117,15 @@ x-zettos:
       
       在 Zima 私有云设备上部署 Syncthing，解锁无与伦比的便利性：享受无限存储容量，确保数据隐私，并从超快的本地网络速度中受益。利用 Syncthing 的功能和 Zima 强大的基础设施，变革您的数据管理和同步体验。
   developer: Syncthing
-  icon: Syncthing/icon.png
+  icon: Syncthing/icon.webp
   tagline:
     en_us: Open decentralized file synchronization
     zh_cn: 开放的去中心化文件同步
-  thumbnail: Syncthing/thumbnail.png
+  thumbnail: Syncthing/thumbnail.webp
   screenshot_link:
-    - Syncthing/screenshot-1.png
-    - Syncthing/screenshot-2.png
-    - Syncthing/screenshot-3.png
+    - Syncthing/screenshot-1.webp
+    - Syncthing/screenshot-2.webp
+    - Syncthing/screenshot-3.webp
   tips: {}
   title:
     en_us: Syncthing

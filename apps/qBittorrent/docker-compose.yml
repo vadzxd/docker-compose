@@ -87,11 +87,11 @@ x-zettos:
     sv_se: qBittorrent-projektets mål är att erbjuda en öppen källkodsalternativ till µTorrent.
     uk_ua: Проект qBittorrent має на меті надати альтернативу з відкритим вихідним кодом для µTorrent.
   developer: qBittorrent
-  icon: qBittorrent/icon.png
+  icon: qBittorrent/icon.webp
   screenshot_link:
-    - qBittorrent/screenshot-1.png
-    - qBittorrent/screenshot-2.png
-    - qBittorrent/screenshot-3.png
+    - qBittorrent/screenshot-1.webp
+    - qBittorrent/screenshot-2.webp
+    - qBittorrent/screenshot-3.webp
   tagline:
     en_us: P2P bittorrent download
     zh_cn: P2P BT 下载
@@ -106,7 +106,7 @@ x-zettos:
     pt_br: Downloader BitTorrent gratuito
     sv_se: Gratis BitTorrent-downladdare
     uk_ua: Безкоштовний завантажувач BitTorrent
-  thumbnail: qBittorrent/thumbnail.png
+  thumbnail: qBittorrent/thumbnail.webp
   tips:
     before_install:
       en_us: |

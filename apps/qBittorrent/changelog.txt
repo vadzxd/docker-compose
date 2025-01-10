@@ -233,7 +233,7 @@ Wed Apr 22 2020 - sledgehammer999 <sledgehammer999@qbittorrent.org> - v4.2.4
     - BUGFIX: Fix wrong logic that disables "prevent sleeping" timer (Chocobo1)
     - BUGFIX: Set disk cache size for older libtorrent versions (NotTsunami)
     - BUGFIX: Sort locale language list (Chocobo1)
-    - BUGFIX: Remove white outline around mascot.png (adem)
+    - BUGFIX: Remove white outline around mascot.webp (adem)
     - BUGFIX: Various fixes in configuring the chosen network interface and not leaking the IP (Raif Atef, an0n666)
     - BUGFIX: Save "resume data" when torrent storage is moved (glassez)
     - BUGFIX: Avoid holding encoded resume data in memory (Chocobo1)
@@ -1451,7 +1451,7 @@ Tue Dec 03 2019 - sledgehammer999 <sledgehammer999@qbittorrent.org> - v4.2.0
 * Sat Oct 10 2015 - sledgehammer999 <sledgehammer999@qbittorrent.org> - v3.2.4
     - FEATURE: Select the file of single file torrents when opening destination folder (pmzqla)
     - BUGFIX: Fix crash with invalid favicon. Closes #3632. (glassez)
-    - BUGFIX: Try to download favicon.png when the download of favicon.ico fails (pmzqla)
+    - BUGFIX: Try to download favicon.webp when the download of favicon.ico fails (pmzqla)
     - BUGFIX: Try to avoid loading a corrupted configuration file. Also log errors encountered while saving/loading the configuration. Closes #3503. (sledgehammer999)
     - BUGFIX: Allow adding torrent link from Torcache (jsayol)
     - BUGFIX: Don't limit the number of torrents that can be announced to the tracker/dht/lsd. Closes #3473. (sledgehammer999)
@@ -1506,7 +1506,7 @@ Tue Dec 03 2019 - sledgehammer999 <sledgehammer999@qbittorrent.org> - v4.2.0
     - BUGFIX: Fix HTTP header parsing when torrent filename contains a semicolon. Closes #3511.
     - BUGFIX: Fix installing search plugin from local file. (sledgehammer999)
     - BUGFIX: Fix installing search plugin by drag-n-dropping file. (sledgehammer999)
-    - COSMETIC: Update color scheme of completed.png icon. (sledgehammer999)
+    - COSMETIC: Update color scheme of completed.webp icon. (sledgehammer999)
     - COSMETIC: Fix printing of the copyright symbol in the About dialog. (sledgehammer999)
     - COSMETIC: Minor changes in Preview File dialog (ngosang)
     - COSMETIC: Add Force Resume icon (ngosang)

@@ -69,13 +69,13 @@ x-zettos:
     sv_se: håller reda på din nätverkslatens.
     uk_ua: відстежує затримку мережі.
   developer: Lazylibrarian Team
-  icon: Smokeping/icon.png
+  icon: Smokeping/icon.webp
   screenshot_link:
-    - Smokeping/screenshot-1.png
-    - Smokeping/screenshot-2.png
-    - Smokeping/screenshot-3.png
-    - Smokeping/screenshot-4.png
-    - Smokeping/screenshot-5.png
+    - Smokeping/screenshot-1.webp
+    - Smokeping/screenshot-2.webp
+    - Smokeping/screenshot-3.webp
+    - Smokeping/screenshot-4.webp
+    - Smokeping/screenshot-5.webp
   tagline:
     en_us: Free open source network performance monitoring tool
     zh_cn: 免费开源的网络性能监控工具
@@ -90,7 +90,7 @@ x-zettos:
     pt_br: Ferramenta de monitoramento de desempenho de rede de código aberto gratuita
     sv_se: Gratis öppen källkodsnätverksprestandamonteringsverktyg
     uk_ua: Безкоштовний інструмент моніторингу продуктивності мережі з відкритим вихідним кодом
-  thumbnail: Smokeping/thumbnail.png
+  thumbnail: Smokeping/thumbnail.webp
   tips: {}
   title:
     en_us: Smokeping

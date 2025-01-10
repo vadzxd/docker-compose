@@ -127,13 +127,13 @@ x-zettos:
     pl_pl: Aplikacja towarzysząca od osoby trzeciej, dostępna dla właścicieli serwerów Plex, umożliwiająca użytkownikom żądanie, przeglądanie i odkrywanie treści.
     pt_br: Um aplicativo complementar de terceiros disponível para proprietários de servidores Plex, permitindo que seus usuários solicitem, revisem e descubram conteúdo.
   screenshot_link:
-    - Petio/screenshot-1.png
-    - Petio/screenshot-2.png
-    - Petio/screenshot-3.png
+    - Petio/screenshot-1.webp
+    - Petio/screenshot-2.webp
+    - Petio/screenshot-3.webp
   developer: Petio Team
   author: WisdomSky
-  icon: Petio/icon.png
-  thumbnail: Petio/icon.png
+  icon: Petio/icon.webp
+  thumbnail: Petio/icon.webp
   title:
     en_us: Petio
   category: MultiMedia

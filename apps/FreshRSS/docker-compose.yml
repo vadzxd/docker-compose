@@ -59,11 +59,11 @@ x-zettos:
     sv_se: FreshRSS är en självhanterad RSS- och Atom-flödesaggregator. Det är lättviktigt, enkelt att arbeta med, kraftfullt och anpassningsbart.
     uk_ua: FreshRSS - це саморозміщений агрегатор RSS та Atom-стрічок. Він легкий, простий у роботі, потужний і налаштовується.
   developer: FreshRSS
-  icon: FreshRSS/icon.png
+  icon: FreshRSS/icon.webp
   screenshot_link:
-    - FreshRSS/screenshot-1.png
-    - FreshRSS/screenshot-2.png
-    - FreshRSS/screenshot-3.png
+    - FreshRSS/screenshot-1.webp
+    - FreshRSS/screenshot-2.webp
+    - FreshRSS/screenshot-3.webp
   tagline:
     en_us: A free, self-hostable news aggregator…
     zh_cn: 一个免费的、可自行托管的新闻聚合器...

@@ -2,14 +2,14 @@
 	"version": "2.0",
 	"title": "2FAuth",
 	"name": "2fauth",
-	"icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/icon.png",
+	"icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/icon.webp",
 	"tagline": "A web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes",
 	"overview": "2FAuth is a web based self-hosted alternative to One Time Passcode (OTP) generators like Google Authenticator, designed for both mobile and desktop.",
-	"thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/thumbnail.png",
+	"thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/thumbnail.webp",
 	"screenshots": [
-		"https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/screenshot-1.png",
-		"https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/screenshot-2.png",
-		"https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/screenshot-3.png"
+		"https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/screenshot-1.webp",
+		"https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/screenshot-2.webp",
+		"https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/2FAuth/screenshot-3.webp"
 	],
 	"category": [
 		"Utilities"

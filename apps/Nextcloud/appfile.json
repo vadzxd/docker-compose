@@ -2,14 +2,14 @@
   "version": "2.0",
   "title": "Nextcloud",
   "name": "nextcloud",
-  "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/icon.png",
+  "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/icon.webp",
   "tagline": "The productivity platform that keeps you in control",
   "overview": "Nextcloud puts your data at your fingertips, under your control. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.",
-  "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/thumbnail.jpg",
+  "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/thumbnail.webp",
   "screenshots": [
-    "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/screenshot-1.png",
-    "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/screenshot-2.png",
-    "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/screenshot-3.png"
+    "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/screenshot-1.webp",
+    "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/screenshot-2.webp",
+    "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/Nextcloud/screenshot-3.webp"
   ],
   "category": [
     "Cloud"

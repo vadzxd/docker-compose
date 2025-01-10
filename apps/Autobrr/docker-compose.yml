@@ -44,11 +44,11 @@ x-zettos:
   author: Autobrr Team
   developer: Autobrr Team
   category: MultiMedia
-  icon: Autobrr/icon.png
-  thumbnail: Autobrr/thumbnail.png
+  icon: Autobrr/icon.webp
+  thumbnail: Autobrr/thumbnail.webp
   screenshot_link:
-    - Autobrr/screenshot-1.png
-    - Autobrr/screenshot-2.png
+    - Autobrr/screenshot-1.webp
+    - Autobrr/screenshot-2.webp
   description:
     en_us: Autobrr is the modern download automation tool for torrents and usenet. With inspiration and ideas from tools like trackarr, autodl-irssi and flexget we built one tool that can do it all, and then some.
     zh_cn: Autobrr是用于torrents和Usenet的现代下载自动化工具。受到trackarr、autodl-irssi和flexget等工具的启发和理念，我们构建了一个可以完成所有这些任务的工具，甚至更多。

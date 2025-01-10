@@ -9,7 +9,7 @@ services:
           memory: "256M"
     image: zadam/trilium:0.62.2
     labels:
-      icon: Trilium/icon.png
+      icon: Trilium/icon.webp
     ports:
       - target: 8080
         published: "8088"
@@ -35,11 +35,11 @@ x-zettos:
     en_us: Trilium Notes is a hierarchical note-taking application with a focus on building large personal knowledge bases.
     zh_cn: Trilium Notes是一款具有层次结构的笔记应用程序，专注于构建庞大的个人知识库。
   developer: zadam
-  icon: Trilium/icon.png
+  icon: Trilium/icon.webp
   screenshot_link:
-    - Trilium/screenshot-1.png
-    - Trilium/screenshot-2.png
-    - Trilium/screenshot-3.png
+    - Trilium/screenshot-1.webp
+    - Trilium/screenshot-2.webp
+    - Trilium/screenshot-3.webp
   index: /
   port_map: "8088"
   scheme: http

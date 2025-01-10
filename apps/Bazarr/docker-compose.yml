@@ -73,12 +73,12 @@ x-zettos:
     sv_se: Bazarr är ett komplement till Sonarr och Radarr. Det kan hantera och ladda ner undertexter baserat på dina krav. Du definierar dina preferenser för TV-serie eller film och Bazarr tar hand om allt åt dig.
     uk_ua: Bazarr - це додаткова програма до Sonarr і Radarr. Він може керувати і завантажувати субтитри відповідно до ваших вимог. Ви визначаєте свої вподобання за серіалом або фільмом, а Bazarr займається усім за вас.
   developer: Sabnzbd Team
-  icon: Bazarr/icon.png
+  icon: Bazarr/icon.webp
   screenshot_link:
-    - Bazarr/screenshot-1.png
-    - Bazarr/screenshot-2.png
-    - Bazarr/screenshot-3.png
-    - Bazarr/screenshot-4.png
+    - Bazarr/screenshot-1.webp
+    - Bazarr/screenshot-2.webp
+    - Bazarr/screenshot-3.webp
+    - Bazarr/screenshot-4.webp
   tagline:
     en_us: Letter generators for Sonarr and Radarr
     zh_cn: Sonarr和Radarr的信件生成器
@@ -93,7 +93,7 @@ x-zettos:
     pt_br: Geradores de cartas para Sonarr e Radarr
     sv_se: Brevgenererare för Sonarr och Radarr
     uk_ua: Генератори листів для Sonarr і Radarr
-  thumbnail: Bazarr/thumbnail.png
+  thumbnail: Bazarr/thumbnail.webp
   tips: {}
   title:
     en_us: Bazarr

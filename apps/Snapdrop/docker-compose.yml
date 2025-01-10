@@ -39,10 +39,10 @@ x-zettos:
     pt_br: Snapdrop é um aplicativo da Web progressivo (PWA) que permite transferir arquivos entre dispositivos na mesma rede sem precisar instalar nada.
     sv_se: Snapdrop är en progressiv webbapp (PWA) som låter dig överföra filer mellan enheter i samma nätverk utan att behöva installera något.
     uk_ua: Snapdrop - це прогресивний веб-додаток (PWA), який дозволяє передавати файли між пристроями в одній мережі без необхідності встановлювати що-небудь.
-  icon: Snapdrop/icon.png
+  icon: Snapdrop/icon.webp
   screenshot_link:
-    - Snapdrop/screenshot-1.png
-    - Snapdrop/screenshot-2.png
+    - Snapdrop/screenshot-1.webp
+    - Snapdrop/screenshot-2.webp
   tagline:
     en_us: Cross-platform file sharing made easy.
     zh_cn: 轻松实现跨平台文件共享。

@@ -75,13 +75,13 @@ x-zettos:
     en_us: Private personal knowledge management
     zh_cn: 隐私优先的个人知识管理
   developer: siyuan-note
-  icon: Siyuan-Note/icon.png
+  icon: Siyuan-Note/icon.webp
   screenshot_link:
-    - Siyuan-Note/screenshot-1.png
-    - Siyuan-Note/screenshot-2.png
-    - Siyuan-Note/screenshot-3.png
-    - Siyuan-Note/screenshot-4.png
-  thumbnail: Siyuan-Note/thumbnail.png
+    - Siyuan-Note/screenshot-1.webp
+    - Siyuan-Note/screenshot-2.webp
+    - Siyuan-Note/screenshot-3.webp
+    - Siyuan-Note/screenshot-4.webp
+  thumbnail: Siyuan-Note/thumbnail.webp
   tips:
     before_install:
       en_us: |

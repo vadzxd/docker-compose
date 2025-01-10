@@ -2,13 +2,13 @@
     "version": "2.0",
     "title": "qBittorrent",
     "name": "qbittorrent",
-    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/icon.png",
+    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/icon.webp",
     "tagline": "Free BitTorrent downloader",
     "overview": "The qBittorrent project aims to provide an open-source software alternative to µTorrent.",
-    "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/thumbnail.jpg",
+    "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/thumbnail.webp",
     "screenshots": [
-        "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/screenshot-1.jpg",
-        "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/screenshot-2.jpg"
+        "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/screenshot-1.webp",
+        "https://cdn.jsdelivr.net/gh/IceWhaleTech/ZettOS-AppStore@main/Apps/qBittorrent/screenshot-2.webp"
     ],
     "category": [
         "Downloader"

@@ -1,6 +1,12 @@
 name: jellyfin
 services:
   jellyfin:
+    healthcheck:
+      test: [ "CMD", "wget", "-q", "--spider", "http://localhost:8096/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
     privileged: true
     user: "root:root"
     devices:
@@ -125,11 +131,11 @@ x-zettos:
     sv_se: Jellyfin gör det möjligt att samla in, hantera och strömma dina medier. Kör Jellyfin-servern på ditt system och få tillgång till ledande underhållningssystem med fri mjukvara, med klockor och dekorationer inkluderade.
     uk_ua: Jellyfin дозволяє збирати, керувати та транслювати вашу медіаінформацію. Запустіть сервер Jellyfin на своєму системі та отримайте доступ до лідерської системи розваг з відкритим програмним забезпеченням, включаючи дзвінки та оздоблення.
   developer: Jellyfin
-  icon: Jellyfin/icon.png
+  icon: Jellyfin/icon.webp
   screenshot_link:
-    - Jellyfin/screenshot-1.png
-    - Jellyfin/screenshot-2.png
-    - Jellyfin/screenshot-3.png
+    - Jellyfin/screenshot-1.webp
+    - Jellyfin/screenshot-2.webp
+    - Jellyfin/screenshot-3.webp
   tagline:
     en_us: Puts you in control of your media.
     zh_cn: 让您控制媒体。
@@ -144,7 +150,7 @@ x-zettos:
     pt_br: Coloca você no controle de seus meios de comunicação.
     sv_se: Lägger dig i centrum av dina medier.
     uk_ua: Помагає вам контролювати вашу медіаінформацію.
-  thumbnail: Jellyfin/thumbnail.png
+  thumbnail: Jellyfin/thumbnail.webp
   tips: {}
   title:
     en_us: Jellyfin

@@ -2,8 +2,8 @@ name: readarr
 services:
   readarr:
     environment:
-      PGID: $PGID
-      PUID: $PUID
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/readarr:0.3.10-develop
     deploy:

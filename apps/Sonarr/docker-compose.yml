@@ -2,8 +2,8 @@ name: sonarr
 services:
   sonarr:
     environment:
-      PGID: $PGID
-      PUID: $PUID
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/sonarr:3.0.10
     deploy:

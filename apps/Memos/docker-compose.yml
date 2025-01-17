@@ -2,8 +2,8 @@ name: memos
 services:
   memos:
     environment:
-      PGID: $PGID
-      PUID: $PUID
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: neosmemo/memos:0.17.1
     deploy:

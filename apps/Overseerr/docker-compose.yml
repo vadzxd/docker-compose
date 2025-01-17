@@ -4,8 +4,8 @@ services:
     image: linuxserver/overseerr:1.33.2
     restart: unless-stopped
     environment:
-      PUID: $PUID
-      PGID: $PGID
+      PUID: 0
+      PGID: 0
       TZ: $TZ
     x-zettos:
       envs:

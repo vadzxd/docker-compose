@@ -3,8 +3,8 @@ services:
   deluge:
     environment:
       DELUGE_LOGLEVEL: error
-      PGID: $PGID
-      PUID: $PUID
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/deluge:2.1.1
     deploy:

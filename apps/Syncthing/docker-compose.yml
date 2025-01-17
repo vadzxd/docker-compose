@@ -2,8 +2,8 @@ name: syncthing
 services:
   syncthing:
     environment:
-      PGID: $PGID
-      PUID: $PUID
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/syncthing:1.27.6
     deploy:

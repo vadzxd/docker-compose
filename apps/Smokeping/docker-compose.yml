@@ -2,8 +2,8 @@ name: smokeping
 services:
   smokeping:
     environment:
-      PGID: "1000"
-      PUID: "1000"
+      PGID: 0
+      PUID: 0
       TZ: Europe/London
     image: linuxserver/smokeping:2.8.2
     deploy:

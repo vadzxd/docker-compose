@@ -2,8 +2,8 @@ name: radarr
 services:
   radarr:
     environment:
-      PGID: $PGID
-      PUID: $PUID
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/radarr:5.7.0
     deploy:

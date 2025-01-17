@@ -5,8 +5,8 @@ services:
       --accessAuthCode=ZettOS
       --workspace=/siyuan/workspace/
     environment:
-      PUID: "1000"
-      PGID: "1000"
+      PUID: 0
+      PGID: 0
     image: b3log/siyuan:v3.0.1
     deploy:
       resources:

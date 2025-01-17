@@ -8,8 +8,8 @@ services:
     depends_on:
       - mongo
     environment:
-      PUID: $PUID
-      PGID: $PGID
+      PUID: 0
+      PGID: 0
       TZ: $TZ
     x-zettos:
       envs:
@@ -52,8 +52,8 @@ services:
     networks:
       - petio-network
     environment:
-      PUID: $PUID
-      PGID: $PGID
+      PUID: 0
+      PGID: 0
       TZ: $TZ
     container_name: petio-mongo
 networks:

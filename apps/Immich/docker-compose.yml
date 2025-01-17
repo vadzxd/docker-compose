@@ -6,13 +6,19 @@ services:
       DB_USERNAME: postgres
       DB_PASSWORD: postgres
       DB_DATABASE_NAME: immich
+      DB_HOSTNAME: database
+      REDIS_HOSTNAME: redis
+      MACHINE_LEARNING_HOST: http://immich-machine-learning:3003
+      DB_PORT: 5432
+      REDIS_PORT: 6379
+      NODE_ENV: production
     image: ghcr.io/immich-app/immich-server:v1.111.0
     deploy:
       resources:
         reservations:
           memory: 512M
     volumes:
-      - /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich:/data
+      - /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich/data:/data
     ports:
       - 2283:3001
     depends_on:

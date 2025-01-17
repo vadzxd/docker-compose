@@ -4,6 +4,9 @@ services:
     environment:
       PGID: "1000"
       PUID: "1000"
+      # 添加以下环境变量来确保用户权限正确
+      USER_ID: "1000"
+      GROUP_ID: "1000"
       TZ: Europe/London
     image: linuxserver/lidarr:1.4.5
     deploy:
@@ -23,6 +26,9 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Lidarr/config
         target: /config
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Lidarr/downloads
+        target: /downloads
     x-zettos:
       envs:
         - container: PUID

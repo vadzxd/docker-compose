@@ -2,7 +2,7 @@ name: jellyfin
 services:
   jellyfin:
     healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:8096/health" ]
+      test: ["CMD", "sh", "-c", "if command -v wget > /dev/null; then wget -q --spider http://127.0.0.1:8096/health; else curl -f http://127.0.0.1:8096/health; fi"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -53,6 +53,8 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Jellyfin/media
         target: /media
+        bind:
+          propagation: rslave
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Jellyfin/config
         target: /config

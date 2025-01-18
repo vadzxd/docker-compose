@@ -83,6 +83,9 @@ x-zettos:
     - Siyuan-Note/screenshot-4.webp
   thumbnail: Siyuan-Note/thumbnail.webp
   tips:
+    default_account:
+      username:
+      password: ZettOS
     before_install:
       en_us: |
         | accessAuthCode |

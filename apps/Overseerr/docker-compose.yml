@@ -64,7 +64,7 @@ services:
             uk_ua: Порт для веб-інтерфейсу Overseerr.
     ports:
       - target: 5055
-        published: 5055
+        published: 5065
         protocol: tcp
     volumes:
       - type: bind
@@ -115,6 +115,6 @@ x-zettos:
   title:
     en_us: Overseerr
   category: MultiMedia
-  port_map: '5055'
+  port_map: '5065'
 
   required_memory: 

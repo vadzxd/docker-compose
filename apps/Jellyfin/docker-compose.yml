@@ -8,7 +8,7 @@ services:
       retries: 3
       start_period: 40s
     privileged: true
-    user: "root:root"
+    user: "1000:1000"
     devices:
       - /dev/dri:/dev/dri
       - /dev/dma_heap:/dev/dma_heap
@@ -26,8 +26,8 @@ services:
       - /dev/vepu:/dev/vepu
       - /dev/h265e:/dev/h265e
     environment:
-      PGID: 0
-      PUID: 0
+      PGID: 1000
+      PUID: 1000
       TZ: $TZ
     image: jellyfin/jellyfin
     deploy:
@@ -53,11 +53,14 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Jellyfin/media
         target: /media
-        bind:
-          propagation: rslave
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Jellyfin/config
         target: /config
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     x-zettos:
       envs:
         - container: TZ

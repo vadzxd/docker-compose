@@ -2,10 +2,11 @@ name: readarr
 services:
   readarr:
     environment:
-      PGID: 0
-      PUID: 0
+      PGID: 1000
+      PUID: 1000
       TZ: $TZ
     image: linuxserver/readarr:0.3.10-develop
+    user: "1000:1000"
     deploy:
       resources:
         reservations:
@@ -26,6 +27,11 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Readarr/downloads
         target: /downloads
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     x-zettos:
       envs:
         - container: PUID
@@ -99,5 +105,6 @@ x-zettos:
   title:
     en_us: Readarr
   port_map: "8787"
+  index: /
 
   required_memory: 64M

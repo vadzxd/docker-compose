@@ -98,7 +98,7 @@ x-zettos:
   title:
     en_us: SiYuan Note
     zh_cn: 思源笔记
-  index:
+  index: /
   port_map: "6806"
 
   required_memory: 512M

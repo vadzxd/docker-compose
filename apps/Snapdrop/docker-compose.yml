@@ -15,10 +15,16 @@ services:
         published: "89"
         protocol: tcp
     restart: unless-stopped
+    user: "1000:1000"
     volumes:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Snapdrop/config
         target: /config
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     privileged: false
     container_name: snapdrop
 x-zettos:

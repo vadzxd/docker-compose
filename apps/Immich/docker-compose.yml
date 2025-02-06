@@ -9,7 +9,15 @@ services:
     hostname: immich-server
     image: altran1502/immich-server:v1.123.0
     volumes:
-      - /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich:/usr/src/app/upload
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich
+        target: /usr/src/app/upload
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
+
     environment:
       DB_DATABASE_NAME: immich
       DB_PASSWORD: postgres

@@ -3,8 +3,8 @@ services:
   deluge:
     environment:
       DELUGE_LOGLEVEL: error
-      PGID: 0
-      PUID: 0
+      PGID: 1000
+      PUID: 1000
       TZ: $TZ
     image: linuxserver/deluge:2.1.1
     deploy:
@@ -12,6 +12,7 @@ services:
         reservations:
           memory: 256M
     network_mode: bridge
+    user: "1000:1000"
     ports:
       - target: 8112
         published: "8112"
@@ -30,6 +31,11 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Deluge/config
         target: /config
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     x-zettos:
       envs:
         - container: TZ

@@ -16,6 +16,7 @@ services:
         published: "5055"
         protocol: tcp
     restart: unless-stopped
+    user: "1000:1000"
     volumes:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Jellyseerr/media
@@ -23,6 +24,11 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Jellyseerr/config
         target: /config
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     network_mode: bridge
     privileged: false
 x-zettos:

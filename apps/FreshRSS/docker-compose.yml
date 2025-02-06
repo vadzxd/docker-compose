@@ -78,6 +78,7 @@ x-zettos:
     sv_se: En gratis, självhanterlig nyhetsaggregator ...
     uk_ua: Безкоштовний агрегатор новин, що саморозміщується...
   port_map: "8749"
+  index: /
   scheme: http
   store_app_id: freshrss
   title:

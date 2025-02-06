@@ -8,10 +8,11 @@ services:
       - /dev/video11:/dev/video11
       - /dev/video12:/dev/video12
     environment:
-      PGID: 0
-      PUID: 0
+      PGID: 1000
+      PUID: 1000
       TZ: $TZ
     image: linuxserver/emby:4.7.14
+    user: "1000:1000"
     deploy:
       resources:
         reservations:
@@ -32,6 +33,11 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Emby/config
         target: /config
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     x-zettos:
       envs:
         - container: PUID

@@ -2,8 +2,8 @@ name: homeassistant
 services:
   homeassistant:
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: homeassistant/home-assistant:2025.1
     deploy:
@@ -12,7 +12,7 @@ services:
           memory: 256M
     network_mode: host
     restart: unless-stopped
-    user: "1000:1000"
+    user: "0:0"
     volumes:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Home assistant/config

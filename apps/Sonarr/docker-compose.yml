@@ -27,6 +27,11 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Sonarr/downloads
         target: /downloads
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     x-zettos:
       envs:
         - container: TZ

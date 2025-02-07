@@ -19,8 +19,11 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Memos
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Memos/app/data
         target: /app/data
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Memos/opt/memos
+        target: /var/opt/memos/
       - type: bind
         source: /zettos/raid/non-snapshot/fileservice/share
         target: /zettos_data

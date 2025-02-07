@@ -19,6 +19,11 @@ services:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/MySpeed/data
         target: /data
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     network_mode: bridge
     privileged: false
     x-zettos:

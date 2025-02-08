@@ -4,12 +4,12 @@ services:
     environment:
       PASS: ZettOS
       PEERPORT: "51413"
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       TZ: Europe/London
       USER: ZettOS
     image: linuxserver/transmission:4.0.6
-    user: "1000:1000"
+    user: "0:0"
     deploy:
       resources:
         reservations:

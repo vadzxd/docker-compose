@@ -2,11 +2,11 @@ name: sonarr
 services:
   sonarr:
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/sonarr:3.0.10
-    user: "1000:1000"
+    user: "0:0"
     deploy:
       resources:
         reservations:

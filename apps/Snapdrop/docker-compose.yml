@@ -2,8 +2,8 @@ name: snapdrop
 services:
   snapdrop:
     environment:
-      - PGID=$PGID
-      - PUID=$PUID
+      - PGID=0
+      - PUID=0
       - TZ=$TZ
     image: linuxserver/snapdrop:version-eac78009
     network_mode: bridge
@@ -15,7 +15,7 @@ services:
         published: "89"
         protocol: tcp
     restart: unless-stopped
-    user: "1000:1000"
+    user: "0:0"
     volumes:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Snapdrop/config

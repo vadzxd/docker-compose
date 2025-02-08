@@ -2,14 +2,14 @@ name: lidarr
 services:
   lidarr:
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       # 添加以下环境变量来确保用户权限正确
-      USER_ID: "1000"
-      GROUP_ID: "1000"
+      USER_ID: "0"
+      GROUP_ID: "0"
       TZ: Europe/London
     image: linuxserver/lidarr:1.4.5
-    user: "1000:1000"
+    user: "0:0"
     deploy:
       resources:
         reservations:

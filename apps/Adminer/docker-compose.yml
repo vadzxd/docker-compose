@@ -7,11 +7,14 @@ services:
         reservations:
           memory: 32M
     restart: unless-stopped
+    user: "0:0"
     ports:
-      - 8080:8085
+      - target: 8080
+        published: "8095"
+        protocol: tcp
     x-zettos:
       ports:
-        - container: "8085"
+        - container: "8095"
           description:
             en_us: Adminer HTTP Port
             zh_cn: Adminer HTTP 端口
@@ -39,6 +42,6 @@ x-zettos:
   thumbnail: Adminer/thumbnail.webp
   title:
     en_us: Adminer
-  port_map: '8085'
+  port_map: '8095'
 
   required_memory: 32M

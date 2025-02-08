@@ -4,13 +4,13 @@ services:
     environment:
       WEBUI_PORT: 8181
       BT_PORT: 34567
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       UMASK: "002"
       QB_USERNAME: ZettOS
       QB_PASSWORD: ZettOS
     image: nevinee/qbittorrent:5.0.3
-    user: "1000:1000"
+    user: "0:0"
     deploy:
       resources:
         reservations:

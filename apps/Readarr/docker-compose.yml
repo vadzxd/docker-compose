@@ -2,11 +2,11 @@ name: readarr
 services:
   readarr:
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: linuxserver/readarr:0.3.10-develop
-    user: "1000:1000"
+    user: "0:0"
     deploy:
       resources:
         reservations:

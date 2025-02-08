@@ -2,8 +2,8 @@ name: filebrowser
 services:
   filebrowser:
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: filebrowser/filebrowser:v2.23.0
     deploy:
@@ -16,7 +16,7 @@ services:
         published: "10180"
         protocol: tcp
     restart: unless-stopped
-    user: "1000:1000"
+    user: "0:0"
     volumes:
       - type: bind
         source: /zettos/pool/1/virtual_machine/docker/DATA/installed/FileBrowser/db
@@ -29,6 +29,11 @@ services:
         target: /zettos_data
         bind:
           propagation: rshared
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:80/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     x-zettos:
       envs:
         - container: TZ
@@ -103,19 +108,9 @@ x-zettos:
     uk_ua: Завантажте, видаліть, перегляньте, перейменуйте, відредагуйте і поділіться своїми файлами.
   thumbnail: FileBrowser/thumbnail.jpg
   tips:
-    before_install:
-      en_us: |
-        Default Account
-
-        | Username | Password |
-        | -------- | -------- |
-        | `admin`    | `admin`    |
-      zh_cn: |
-        默认账号
-
-        | 用户名 | 密码 |
-        | -------- | -------- |
-        | `admin`    | `admin`    |
+    default_account:
+      username: admin
+      password: admin
   title:
     en_us: FileBrowser
   index: /

@@ -105,10 +105,7 @@ x-zettos:
       # Features That Make a Difference
       
       Syncthing offers a seamless, user-friendly experience with powerful features designed for everyday users. Enjoy continuous file synchronization between multiple devices without any subscription fees. Experience peace of mind knowing that your data is encrypted and protected from unauthorized access. Syncthing’s open-source nature means no hidden costs, providing a truly transparent and cost-effective solution for your file management needs.
-      
-      # The Power of Syncthing on Zima
-      
-      Deploying Syncthing on Zima private cloud devices unlocks unparalleled convenience: enjoy unlimited storage capacity, ensure the privacy of your data, and benefit from blazing local network speeds. Transform your data management and synchronization with the perfect combination of Syncthing’s capabilities and Zima’s powerful infrastructure.
+
     zh_cn: |
       # 解锁数据备份的真正潜力
       
@@ -118,9 +115,6 @@ x-zettos:
       
       Syncthing 提供了无缝、用户友好的体验，并拥有为日常用户设计的强大功能。无需订阅费用即可在多个设备之间进行持续文件同步。放心，您的数据是加密的，防止未经授权的访问。作为开源项目，Syncthing 没有隐藏费用，为您的文件管理需求提供真正透明和具有成本效益的解决方案。
 
-      # Syncthing 在 Zima 上的强大功能
-      
-      在 Zima 私有云设备上部署 Syncthing，解锁无与伦比的便利性：享受无限存储容量，确保数据隐私，并从超快的本地网络速度中受益。利用 Syncthing 的功能和 Zima 强大的基础设施，变革您的数据管理和同步体验。
   developer: Syncthing
   icon: Syncthing/icon.webp
   tagline:

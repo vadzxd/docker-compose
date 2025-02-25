@@ -24,7 +24,7 @@ services:
     depends_on:
       - redis
       - database
-    restart: always
+    restart: unless-stopped
     healthcheck:
       disable: false
 
@@ -38,7 +38,7 @@ services:
     #   service: cpu # set to one of [armnn, cuda, openvino, openvino-wsl] for accelerated inference - use the `-wsl` version for WSL2 where applicable
     volumes:
       - /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich/model-cache:/cache
-    restart: always
+    restart: unless-stopped
     healthcheck:
       disable: false
 
@@ -47,7 +47,7 @@ services:
     image: docker.io/redis:6.2-alpine@sha256:905c4ee67b8e0aa955331960d2aa745781e6bd89afc44a8584bfd13bc890f0ae
     healthcheck:
       test: redis-cli ping || exit 1
-    restart: always
+    restart: unless-stopped
 
   database:
     container_name: immich_postgres
@@ -74,7 +74,7 @@ services:
       -c max_wal_size=2GB
       -c shared_buffers=512MB
       -c wal_compression=on
-    restart: always
+    restart: unless-stopped
 
 x-zettos:
   architectures:
@@ -98,16 +98,12 @@ x-zettos:
       Immich is here to transform the way you manage and enjoy your media files across your home TV, smartphones, and other devices. Unlike traditional photo albums or mainstream cloud services, immich offers a seamless and modern platform for organizing, sharing, and accessing your photos and videos. Imagine effortlessly backing up your precious moments from your mobile devices and viewing them instantly on your TV or sharing them with family members—immich makes it all possible.
 
       immich stands out with its automatic backup from mobile devices, a sleek web-based interface for easy media browsing, and advanced features like face recognition and object detection. You can organize your media by location, enjoy 4K video playback, and even manage RAW photos. Plus, with multi-user support, sharing memories with friends and family is a breeze. The best part? Immich offers these powerful features for low cost, ensuring you get a premium experience without breaking the bank.
-
-      Deploying immich on a private cloud device like Zima brings unparalleled convenience. Enjoy unlimited storage capacity, blazing-fast local network speeds, and easy multi-device access. With immich on your Zima private cloud, your media is always at your fingertips, safe and secure in your home.
     zh_cn: |
       ## Immich：革新您的家庭媒体体验
 
       Immich 来了，它将彻底改变您在家庭电视、智能手机和其他设备上管理和享受媒体文件的方式。与传统相册或主流云服务不同，Immich 提供了一个无缝且现代化的平台，用于组织、分享和访问您的照片和视频。想象一下，轻松地从移动设备备份珍贵时刻，并立即在电视上观看或与家人分享——Immich 让这一切成为可能。
 
       Immich 以其从移动设备自动备份、时尚的网页界面方便浏览媒体，以及面部识别和物体检测等高级功能而脱颖而出。您可以按位置组织媒体，欣赏 4K 视频播放，甚至管理 RAW 格式照片。此外，多用户支持功能使与朋友和家人分享记忆变得轻而易举。最棒的是，Immich 以低成本提供这些强大的功能，确保您获得高级体验而不会花费太多。
-
-      在像 Zima 这样的私有云设备上部署 Immich 带来了无与伦比的便利。享受无限存储容量、极快的本地网络速度和轻松的多设备访问。通过在 Zima 私有云上使用 Immich，您的媒体始终触手可及，安全可靠地存储在您的家中。
   tagline:
     en_us: Self-hosted media management solution
     zh_cn: 自托管媒体管理解决方案

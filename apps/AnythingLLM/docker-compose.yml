@@ -28,7 +28,7 @@ x-zettos:
   main: anythingllm
   required_memory: ""
   developer: Mintplex Labs
-  category: Chat
+  category: Utilities
   description:
     en_us: AnythingLLM is the easiest to use, all-in-one AI application that can do RAG, AI Agents, and much more with no code or infrastructure headaches.
     en_uk: AnythingLLM is the easiest to use, all-in-one AI application that can do RAG, AI Agents, and much more with no code or infrastructure headaches.

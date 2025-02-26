@@ -5,8 +5,8 @@ services:
       - /dev/dri:/dev/dri
       - /dev/dvb:/dev/dvb
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       VERSION: docker
     image: linuxserver/plex:1.40.1
     deploy:

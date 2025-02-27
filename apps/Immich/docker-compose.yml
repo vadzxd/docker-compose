@@ -19,6 +19,10 @@ services:
         target: /zettos_data
         bind:
           propagation: rshared
+    environment:                                     # 新增环境变量（原通过.env文件注入）
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_DATABASE_NAME=immich
     ports:
       - '2283:2283'
     depends_on:
@@ -36,6 +40,10 @@ services:
     # extends: # uncomment this section for hardware acceleration - see https://immich.app/docs/features/ml-hardware-acceleration
     #   file: hwaccel.ml.yml
     #   service: cpu # set to one of [armnn, cuda, openvino, openvino-wsl] for accelerated inference - use the `-wsl` version for WSL2 where applicable
+    environment:                                     # 新增环境变量（原通过.env文件注入）
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_DATABASE_NAME=immich
     volumes:
       - /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich/model-cache:/cache
     restart: unless-stopped
@@ -57,7 +65,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: immich
       POSTGRES_INITDB_ARGS: '--data-checksums'
-    user: "0:0"
     volumes:
       # Do not edit the next line. If you want to change the database storage location on your system, edit the value of DB_DATA_LOCATION in the .env file
       - /zettos/pool/1/virtual_machine/docker/DATA/installed/Immich/postgres:/var/lib/postgresql/data

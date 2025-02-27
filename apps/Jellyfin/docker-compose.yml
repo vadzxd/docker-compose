@@ -8,7 +8,7 @@ services:
       retries: 3
       start_period: 40s
     privileged: true
-    user: "1000:1000"
+    user: "0:0"
     devices:
       - /dev/dri:/dev/dri
       - /dev/dma_heap:/dev/dma_heap
@@ -26,8 +26,8 @@ services:
       - /dev/vepu:/dev/vepu
       - /dev/h265e:/dev/h265e
     environment:
-      PGID: 1000
-      PUID: 1000
+      PGID: 0
+      PUID: 0
       TZ: $TZ
     image: jellyfin/jellyfin
     deploy:

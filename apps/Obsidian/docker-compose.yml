@@ -1,0 +1,60 @@
+name: obsidian
+services:
+  obsidian:
+    image: lscr.io/linuxserver/obsidian:latest
+    container_name: obsidian
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - LC_ALL=zh_CN.UTF-8
+      - DOCKER_MODS=linuxserver/mods:universal-package-install  # 字体支持
+      - INSTALL_PACKAGES=fonts-noto-cjk
+    volumes:
+      - /zettos/pool/1/virtual_machine/docker/DATA/installed/Obsidian/config:/config
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+      - target: 3001
+        published: "3001"
+        protocol: tcp
+    devices:
+      - /dev/dri:/dev/dri #optional
+    shm_size: "1gb"
+    restart: unless-stopped
+x-zettos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: obsidian
+  author: ZettOS Team
+  category: Utilities
+  description:
+    en_us: |
+      Obsidian is a powerful knowledge management and note-taking tool designed for creating a personal knowledge base. It helps users organize their thoughts, ideas, and information using plain text files, which are stored in markdown format. What sets Obsidian apart is its flexibility and ability to link notes together, creating a web of interconnected ideas. It offers features like bi-directional linking, graph views, and markdown support, making it a perfect tool for anyone looking to capture, organize, and connect their thoughts in a way that is easy to navigate and expand upon. Obsidian is especially useful for writers, researchers, and anyone who values the idea of a digital "second brain."
+
+    zh_cn: |
+      Obsidian 是一款强大的知识管理和笔记工具，旨在帮助用户创建个人知识库。它使用纯文本文件以 Markdown 格式存储，帮助用户组织思维、想法和信息。Obsidian 的独特之处在于它的灵活性和能够将笔记相互链接，构建一个互相关联的思维网络。它提供了双向链接、图形视图和 Markdown 支持等功能，非常适合任何希望以易于导航和扩展的方式捕捉、组织和连接自己想法的人。Obsidian 特别适用于作家、研究人员以及任何重视数字“第二大脑”概念的人。
+  developer: obsidian
+  icon: Obsidian/icon.svg
+  screenshot_link:
+    - Obsidian/screenshot-1.png
+    - Obsidian/screenshot-2.png
+    - Obsidian/screenshot-3.png
+    - Obsidian/screenshot-4.png
+    - Obsidian/screenshot-5.webp
+  tagline:
+    en_us: Knowledge management and note-taking tool
+    zh_cn: 知识管理和笔记工具
+  thumbnail: Obsidian/thumbnail.webp
+  tips: {}
+  title:
+    en_us: Obsidian
+  index: /
+  port_map: "3000"
+
+  required_memory: 512M

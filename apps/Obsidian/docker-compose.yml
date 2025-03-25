@@ -14,6 +14,11 @@ services:
       - INSTALL_PACKAGES=fonts-noto-cjk
     volumes:
       - /zettos/pool/1/virtual_machine/docker/DATA/installed/Obsidian/config:/config
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
     ports:
       - target: 3000
         published: "3000"
@@ -36,9 +41,10 @@ x-zettos:
   description:
     en_us: |
       Obsidian is a powerful knowledge management and note-taking tool designed for creating a personal knowledge base. It helps users organize their thoughts, ideas, and information using plain text files, which are stored in markdown format. What sets Obsidian apart is its flexibility and ability to link notes together, creating a web of interconnected ideas. It offers features like bi-directional linking, graph views, and markdown support, making it a perfect tool for anyone looking to capture, organize, and connect their thoughts in a way that is easy to navigate and expand upon. Obsidian is especially useful for writers, researchers, and anyone who values the idea of a digital "second brain."
-
+      Because app need to download the font, after the app is installed, please wait for a while before opening it.
     zh_cn: |
       Obsidian 是一款强大的知识管理和笔记工具，旨在帮助用户创建个人知识库。它使用纯文本文件以 Markdown 格式存储，帮助用户组织思维、想法和信息。Obsidian 的独特之处在于它的灵活性和能够将笔记相互链接，构建一个互相关联的思维网络。它提供了双向链接、图形视图和 Markdown 支持等功能，非常适合任何希望以易于导航和扩展的方式捕捉、组织和连接自己想法的人。Obsidian 特别适用于作家、研究人员以及任何重视数字“第二大脑”概念的人。
+      因为需要下载字体，app安装完成后，请等待一段时间再打开
   developer: obsidian
   icon: Obsidian/icon.svg
   screenshot_link:

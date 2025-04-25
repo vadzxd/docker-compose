@@ -76,4 +76,5 @@ x-zettos:
   title:
     en_us: 2FAuth
   index: /
+  scheme: http
   port_map: "8000"

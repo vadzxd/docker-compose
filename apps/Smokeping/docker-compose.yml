@@ -102,5 +102,5 @@ x-zettos:
     en_us: Smokeping
   port_map: "10280"
   index: /
-
+  scheme: http
   required_memory: 64M

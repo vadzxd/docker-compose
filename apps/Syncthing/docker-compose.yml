@@ -130,5 +130,5 @@ x-zettos:
     en_us: Syncthing
   index: /
   port_map: "8384"
-
+  scheme: http
   required_memory: 256M

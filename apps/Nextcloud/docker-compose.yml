@@ -109,5 +109,5 @@ x-zettos:
     en_us: Nextcloud
   index: /
   port_map: "10081"
-
+  scheme: http
   required_memory: 512M

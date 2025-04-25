@@ -106,5 +106,5 @@ x-zettos:
     en_us: Readarr
   port_map: "8787"
   index: /
-
+  scheme: http
   required_memory: 64M

@@ -86,9 +86,9 @@ x-zettos:
     zh_cn: 音乐收藏和流媒体服务器
   icon: Navidrome/icon.png
   index: /
+  scheme: http
   main: navidrome
   port_map: "4533"
-  scheme: http
   screenshot_link:
     - Navidrome/screenshot-1.png
     - Navidrome/screenshot-2.png

@@ -1,0 +1,66 @@
+name: it-tools
+services:
+  it-tools:
+    environment:
+      PGID: 0
+      PUID: 0
+      TZ: $TZ
+    image: corentinth/it-tools:latest
+    deploy:
+      resources:
+        reservations:
+          memory: 32M
+    network_mode: bridge
+    ports:
+      - target: 80
+        published: 8085
+        protocol: tcp
+    restart: unless-stopped
+    volumes: []
+    x-zettos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ""
+        - container: PGID
+          description:
+            en_us: ""
+        - container: TZ
+          description:
+            en_us: Timezone
+            zh_cn: 时区
+      ports:
+        - container: "8080"
+          description:
+            en_us: WebUI HTTP Port
+            zh_cn: WebUI HTTP 端口
+      volumes: []
+    container_name: it-tools
+x-zettos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: it-tools
+  author: Corentin Thomasset
+  category: Developer
+  description:
+    en_us: IT-Tools is a collection of handy online tools for developers, sysadmins, and IT enthusiasts. It runs fully locally in your browser with no data sent externally.
+    zh_cn: IT-Tools 是一个面向开发者、系统管理员和 IT 爱好者的在线工具集合。完全本地运行，不会发送任何数据到外部。
+  developer: Corentin Thomasset
+  icon: IT-Tools/icon.webp
+  screenshot_link:
+    - IT-Tools/screenshot-1.webp
+    - IT-Tools/screenshot-2.webp
+    - IT-Tools/screenshot-3.webp
+  tagline:
+    en_us: Collection of useful online tools for developers and sysadmins, running 100% locally.
+    zh_cn: 本地运行的开发者和系统管理员常用工具集合。
+  thumbnail: IT-Tools/thumbnail.webp
+  tips: {}
+  title:
+    en_us: IT-Tools
+  port_map: "8085"
+  index: /
+  scheme: http
+  required_memory: 32M

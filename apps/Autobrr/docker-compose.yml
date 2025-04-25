@@ -60,4 +60,6 @@ x-zettos:
   tagline:
     en_us: Modern, easy to use download automation for torrents and usenet.
     zh_cn: 现代、易于使用的Torrents和Usenet下载自动化工具。
+  index: /
+  scheme: http
 

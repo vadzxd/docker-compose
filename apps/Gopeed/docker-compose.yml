@@ -71,6 +71,7 @@ x-zettos:
     en_us: Gopeed
     pt_br: Gopeed
   index: /
+  scheme: http
   port_map: "9999"
 
 

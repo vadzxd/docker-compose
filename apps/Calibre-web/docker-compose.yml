@@ -105,6 +105,6 @@ x-zettos:
   title:
     en_us: Calibre-web
   index: /
+  scheme: http
   port_map: "8083"
-
   required_memory: 64M

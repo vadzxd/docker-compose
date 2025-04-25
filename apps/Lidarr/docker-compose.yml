@@ -109,5 +109,5 @@ x-zettos:
     en_us: Lidarr
   port_map: "8686"
   index: /
-
+  scheme: http
   required_memory: 64M

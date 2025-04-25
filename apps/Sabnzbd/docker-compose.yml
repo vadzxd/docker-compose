@@ -107,5 +107,5 @@ x-zettos:
     en_us: Sabnzbd
   port_map: "8282"
   index: /
-
+  scheme: http
   required_memory: 64M

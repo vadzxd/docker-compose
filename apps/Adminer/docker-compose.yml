@@ -43,5 +43,5 @@ x-zettos:
   title:
     en_us: Adminer
   port_map: '8095'
-
+  scheme: http
   required_memory: 32M

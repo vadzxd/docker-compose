@@ -78,5 +78,5 @@ x-zettos:
   title:
     en_us: Memos
   port_map: "5230"
-
+  scheme: http
   required_memory: 64M

@@ -115,5 +115,5 @@ x-zettos:
     en_us: FileBrowser
   index: /
   port_map: "10180"
-
+  scheme: http
   required_memory: 64M

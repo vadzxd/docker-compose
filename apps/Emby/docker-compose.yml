@@ -116,5 +116,5 @@ x-zettos:
     en_us: Emby
   index: /
   port_map: "8098"
-
+  scheme: http
   required_memory: 64M

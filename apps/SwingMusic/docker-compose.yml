@@ -54,5 +54,5 @@ x-zettos:
     zh_cn: Swing Music
   index: /
   port_map: "1970"
-
+  scheme: http
   required_memory: 

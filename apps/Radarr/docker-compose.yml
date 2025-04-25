@@ -111,5 +111,5 @@ x-zettos:
     en_us: Radarr
   index: /
   port_map: "7878"
-
+  scheme: http
   required_memory: 256M

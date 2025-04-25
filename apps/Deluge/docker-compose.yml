@@ -160,5 +160,5 @@ x-zettos:
     en_us: Deluge
   index: /
   port_map: "8112"
-
+  scheme: http
   required_memory: 256M

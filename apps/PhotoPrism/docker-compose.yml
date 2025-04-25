@@ -122,5 +122,5 @@ x-zettos:
     en_us: PhotoPrism
   index: /
   port_map: "2342"
-
+  scheme: http
   required_memory: 512M

@@ -1,0 +1,128 @@
+name: unifi-network-application
+services:
+  unifi-network-application:
+    container_name: unifi-network-application
+    depends_on:
+      unifi-db:
+        condition: service_started
+        required: true
+    environment:
+      - MONGO_DBNAME=unifi-db
+      - MONGO_HOST=unifi-db
+      - MONGO_PASS=pass
+      - MONGO_PORT=27017
+      - MONGO_USER=unifi
+      - PGID=$PGID
+      - PUID=$PUID
+      - TZ=$TZ
+    image: lscr.io/linuxserver/unifi-network-application:latest
+    ports:
+      - target: 8443
+        published: "8443"
+        protocol: tcp
+      - target: 3478
+        published: "3478"
+        protocol: udp
+      - target: 10001
+        published: "10001"
+        protocol: udp
+      - target: 8080
+        published: "8084"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - /zettos/pool/1/virtual_machine/docker/DATA/installed/Unifi-Network-Application/mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Unifi-Network-Application/data/db
+        target: /data/db
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
+    networks:
+     - unifi-bridge
+    privileged: false
+    x-zettos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ""
+        - container: PGID
+          description:
+            en_us: ""
+        - container: TZ
+          description:
+            en_us: "timezone"
+            zh_cn: "时区"
+      ports:
+        - container: "8443"
+          description:
+            en_us: WebUI HTTP Port
+            zh_cn: WebUI HTTP 端口
+  unifi-db:
+    container_name: unifi-db
+    image: docker.io/mongo:3.6
+    configs:
+      - source: init-mongo.js
+        target: /docker-entrypoint-initdb.d/init-mongo.js
+    environment:
+      - PGID=$PGID
+      - PUID=$PUID
+      - TZ=$TZ
+    ports:
+      - target: 27017
+        published: "27017"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Unifi-Network-Application/unifi-db
+        target: /data/db
+    networks:
+     - unifi-bridge
+    privileged: false
+networks:
+  unifi-bridge:
+    driver: bridge
+configs:
+  init-mongo.js:
+    content: |
+      db.getSiblingDB("unifi-db").createUser({user: "unifi", pwd: "pass", roles: [{role: "dbOwner", db: "unifi-db"}]}); 
+      db.getSiblingDB("unifi-db_stat").createUser({user: "unifi", pwd: "pass", roles: [{role: "dbOwner", db: "unifi-db_stat"}]});
+x-zettos:
+  architectures:                 
+    - amd64
+    - arm64
+  main: unifi-network-application
+  author: "Giuseppe Galilei"
+  developer: "Ubiquiti and Linuxserver.io"
+  category: Utilities
+  icon: Unifi-Network-Application/icon.png
+  description:
+    en_us: |
+         After the container is created successfully, you need to wait for the database to complete initialization before accessing the WebUI. It takes about 1 minute
+         If you use http's 8084 port to map to the internal port 8080, Unifi will forward it to https 8443
+         Learn more [information](https://docs.linuxserver.io/images/docker-unifi-network-application/)
+
+    zh_cn: |
+          容器创建成功后，需要等待数据库完成初始化后才能访问WebUI。这大概需要1分钟左右的时间
+          如果使用http的8084端口映射到内部的8080端口，Unifi会做转发到https的8443
+
+          了解更多[信息](https://docs.linuxserver.io/images/docker-unifi-network-application/)
+  screenshot_link: 
+    - Unifi-Network-Application/screenshot-1.png
+    - Unifi-Network-Application/screenshot-2.png
+  tagline:
+    en_us: The Unifi network application software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
+    zh_cn: Unifi控制器软件是一种功能强大的企业级无线软件引擎，适用于需要低延迟和高可用性性能的高密度客户端部署。
+  tips:
+  thumbnail:  Unifi-network-application/thumbnail.png
+  index: /
+  port_map: "8443"
+  scheme: https
+  store_app_id: unifi-network-application
+  title:
+    en_us: Unifi Network Application
+
+  required_memory: 

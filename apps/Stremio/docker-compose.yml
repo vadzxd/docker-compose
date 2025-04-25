@@ -93,4 +93,5 @@ x-zettos:
     zh_cn: Stremio
   index: /
   port_map: "8100"
+  scheme: http
   required_memory: 

@@ -161,5 +161,6 @@ x-zettos:
     en_us: Transmission
   index: /
   port_map: "9091"
-
+  scheme: http
   required_memory: 64M
+  has_login_window: true

@@ -105,5 +105,5 @@ x-zettos:
     en_us: Bazarr
   port_map: "6767"
   index: /
-
+  scheme: http
   required_memory: 64M

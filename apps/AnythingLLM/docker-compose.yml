@@ -62,11 +62,11 @@ x-zettos:
         **使用上のヒント**
         AnythingLLM は、さまざまな LLMs バックエンドをサポートしていますが、必要なバックエンドを自分で構成する必要があります。
         詳細については、[公式ドキュメント](https://docs.anythingllm.com)を参照してください。
-  scheme: http
   title:
     en_us: AnythingLLM
     en_uk: AnythingLLM
     zh_cn: AnythingLLM
     ja_jp: AnythingLLM
   index: /
+  scheme: http
   port_map: "3051"

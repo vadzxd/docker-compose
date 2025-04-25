@@ -70,5 +70,5 @@ x-zettos:
     en_us: OpenSpeedTest
   index: /
   port_map: "3004"
-
+  scheme: http
   required_memory: 64M

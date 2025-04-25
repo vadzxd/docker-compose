@@ -62,5 +62,5 @@ x-zettos:
     en_us: Obsidian
   index: /
   port_map: "3000"
-
+  scheme: http
   required_memory: 512M

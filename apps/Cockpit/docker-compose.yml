@@ -1,0 +1,92 @@
+name: cockpit
+services:
+  cockpit:
+    environment:
+      PGID: 0
+      PUID: 0
+      TZ: $TZ
+    image: cockpithq/cockpit:pro-latest
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
+    network_mode: bridge
+    user: "0:0"
+    ports:
+      - target: 80
+        published: "99"
+        protocol: tcp
+#      - target: 443
+#        published: "9443"
+#        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Cockpit/storage
+        target: /var/www/html/storage
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Cockpit/config
+        target: /var/www/html/config
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Cockpit/caddy_data
+        target: /data/caddy
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Cockpit/caddy_config
+        target: /config/caddy
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
+    x-zettos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ""
+        - container: PGID
+          description:
+            en_us: ""
+        - container: TZ
+          description:
+            en_us: "timezone"
+            zh_cn: "时区"
+      ports:
+        - container: "99"
+          description:
+            en_us: WebUI HTTP Port
+            zh_cn: WebUI HTTP 端口
+      volumes:
+        - container: /var/opt/cockpit
+          description:
+            en_us: cockpit data directory.
+            zh_cn: cockpit 数据目录
+
+    container_name: cockpit
+x-zettos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: cockpit
+  author: Cockpit
+  category: Utilities
+  description:
+    en_us: Cockpit is the official Docker image for deploying Cockpit CMS (Content Management System). Cockpit is an open source, API-first headless CMS designed to provide developers with a lightweight content platform that facilitates the integration of content into any front-end application or website,Please save the password for the first login display and then modify it in the settings.
+    zh_cn: Cockpit是用于部署 Cockpit CMS（内容管理系统）的官方 Docker 镜像。Cockpit 是一个开源的、API 优先的无头 CMS，旨在为开发者提供一个轻量级的内容平台，方便地将内容集成到任何前端应用或网站中。请保存好首次登录展示的密码，然后在设置里进行修改。
+  developer: Cockpit
+  icon: Cockpit/icon.webp
+  screenshot_link:
+    - Cockpit/screenshot-1.webp
+    - Cockpit/screenshot-2.webp
+    - Cockpit/screenshot-3.webp
+  tagline:
+    en_us: Cockpit is the official Docker image for deploying Cockpit CMS (Content Management System). Cockpit is an open source, API-first headless CMS designed to provide developers with a lightweight content platform that facilitates the integration of content into any front-end application or website.
+    zh_cn: Cockpit是用于部署 Cockpit CMS（内容管理系统）的官方 Docker 镜像。Cockpit 是一个开源的、API 优先的无头 CMS，旨在为开发者提供一个轻量级的内容平台，方便地将内容集成到任何前端应用或网站中。
+  thumbnail: Cockpit/thumbnail.webp
+  tips: {}
+  title:
+    en_us: Cockpit
+  port_map: "99"
+  index: /install
+  scheme: http
+  required_memory: 64M

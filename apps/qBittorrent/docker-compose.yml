@@ -128,5 +128,5 @@ x-zettos:
     en_us: qBittorrent
   index: /
   port_map: "8181"
-
+  scheme: http
   required_memory: 256M

@@ -161,5 +161,5 @@ x-zettos:
     en_us: Jellyfin
   index: /
   port_map: "8097"
-
+  scheme: http
   required_memory: 256M

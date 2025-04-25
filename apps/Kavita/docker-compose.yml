@@ -1,0 +1,85 @@
+name: kavita
+services:
+  kavita:
+    image: lscr.io/linuxserver/kavita:latest
+    container_name: kavita
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: $TZ
+    ports:
+      - target: 5000
+        published: 5001
+        protocol: tcp
+    restart: unless-stopped
+    network_mode: bridge
+    deploy:
+      resources:
+        reservations:
+          memory: 256M
+    volumes:
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Kavita/config
+        target: /config
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Kavita/data
+        target: /data
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
+    x-zettos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ""
+        - container: PGID
+          description:
+            en_us: ""
+        - container: TZ
+          description:
+            en_us: Timezone
+            zh_cn: 时区
+      ports:
+        - container: "5001"
+          description:
+            en_us: Web UI
+            zh_cn: 网页界面端口
+      volumes:
+        - container: /config
+          description:
+            en_us: Kavita configuration files
+            zh_cn: Kavita 配置目录
+        - container: /data
+          description:
+            en_us: Comic/Manga Library
+            zh_cn: 漫画书库
+
+x-zettos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: kavita
+  author: linuxserver
+  developer: kavita
+  category: Utilities
+  description:
+    en_us: Kavita is a fast, feature-rich, cross-platform reading server for manga, comics, and books.
+    zh_cn: Kavita 是一个快速、功能丰富、跨平台的阅读服务器，支持漫画、图书等内容。
+  icon: Kavita/icon.webp
+  screenshot_link:
+    - Kavita/screenshot-1.webp
+    - Kavita/screenshot-2.webp
+    - Kavita/screenshot-3.webp
+  tagline:
+    en_us: A fast, feature-rich manga and book server.
+    zh_cn: 快速且功能丰富的漫画与图书服务器
+  thumbnail: Kavita/thumbnail.webp
+  title:
+    en_us: Kavita
+  port_map: "5001"
+  index: /
+  scheme: http
+  required_memory: 256M

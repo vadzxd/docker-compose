@@ -3,7 +3,6 @@ services:
   plex:
     devices:
       - /dev/dri:/dev/dri
-      - /dev/dvb:/dev/dvb
     environment:
       PGID: 0
       PUID: 0
@@ -141,5 +140,5 @@ x-zettos:
     en_us: Plex
   index: /web/index.html
   port_map: "32400"
-
+  scheme: http
   required_memory: 256M

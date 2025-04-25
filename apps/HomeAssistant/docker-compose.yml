@@ -86,5 +86,5 @@ x-zettos:
     en_us: Home Assistant
   index: /
   port_map: "8123"
-
+  scheme: http
   required_memory: 256M

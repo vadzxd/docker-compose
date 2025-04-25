@@ -113,5 +113,5 @@ x-zettos:
     en_us: Sonarr
   index: /
   port_map: "8989"
-
+  scheme: http
   required_memory: 256M

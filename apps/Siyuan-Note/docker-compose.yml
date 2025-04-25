@@ -98,5 +98,5 @@ x-zettos:
     zh_cn: 思源笔记
   index: /
   port_map: "6806"
-
+  scheme: http
   required_memory: 512M

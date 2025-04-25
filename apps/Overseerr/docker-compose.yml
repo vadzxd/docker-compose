@@ -122,5 +122,5 @@ x-zettos:
     en_us: Overseerr
   category: MultiMedia
   port_map: '5065'
-
+  scheme: http
   required_memory: 

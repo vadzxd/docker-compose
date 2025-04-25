@@ -1,0 +1,101 @@
+name: slskd
+services:
+  slskd:
+    environment:
+      SLSKD_REMOTE_CONFIGURATION: "true"
+      PGID: 0
+      PUID: 0
+      TZ: $TZ
+    image: slskd/slskd
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
+    network_mode: bridge
+    ports:
+      - target: 5030
+        published: 5030
+        protocol: tcp
+      - target: 5031
+        published: 5031
+        protocol: tcp
+      - target: 50300
+        published: 50300
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /zettos/pool/1/virtual_machine/docker/DATA/installed/Slskd/app
+        target: /app
+      - type: bind
+        source: /zettos/raid/non-snapshot/fileservice/share
+        target: /zettos_data
+        bind:
+          propagation: rshared
+    x-zettos:
+      envs:
+        - container: SLSKD_REMOTE_CONFIGURATION
+          description:
+            en_us: Enable or disable remote configuration.
+            zh_cn: 是否启用远程配置
+        - container: PUID
+          description:
+            en_us: ""
+        - container: PGID
+          description:
+            en_us: ""
+        - container: TZ
+          description:
+            en_us: Timezone
+            zh_cn: 时区
+      ports:
+        - container: "5030"
+          description:
+            en_us: Web UI
+            zh_cn: 网页界面端口
+        - container: "5031"
+          description:
+            en_us: API or Control Port
+            zh_cn: API 或控制端口
+        - container: "50300"
+          description:
+            en_us: Data Transfer Port
+            zh_cn: 数据传输端口
+      volumes:
+        - container: /app
+          description:
+            en_us: Application data
+            zh_cn: 应用数据目录
+
+    container_name: slskd
+x-zettos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: slskd
+  author: slskd
+  category: Utilities
+  description:
+    en_us: Soulseekd (slskd) is a modern Soulseek-compatible server that allows file sharing via the Soulseek protocol. It provides a web interface and remote management.
+    zh_cn: Soulseekd（slskd）是一个现代的 Soulseek 协议兼容服务器，支持通过 Soulseek 协议进行文件共享，并提供网页界面与远程管理功能。
+  developer: slskd
+  icon: Slskd/icon.webp
+  screenshot_link:
+    - Slskd/screenshot-1.webp
+    - Slskd/screenshot-2.webp
+    - Slskd/screenshot-3.webp
+  tagline:
+    en_us: A modern Soulseek-compatible server with web interface and remote management.
+    zh_cn: 具备网页界面和远程管理功能的 Soulseek 协议服务器
+  thumbnail: Slskd/thumbnail.webp
+  tips:
+    default_account:
+      username: slskd
+      password: slskd
+  title:
+    en_us: Slskd
+  port_map: "5030"
+  index: /
+  scheme: http
+  required_memory: 64M
